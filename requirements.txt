@@ -5,5 +5,5 @@ uvicorn
 python-multipart
 dramatiq~=1.17.1
 APScheduler~=3.10.4
-
 requests~=2.32.3
+beautifulsoup4~=4.12.3
