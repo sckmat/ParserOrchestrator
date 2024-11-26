@@ -22,6 +22,7 @@ def run_parser(file_path: str, parser_id: int):
             raise Exception(" Метод `run` не найден в классе парсера")
 
         result = parser_instance.run()
+        os.makedirs(results_path, exist_ok=True)
         if isinstance(result, dict):
             update_parser_status(parser_id, "Выполнен")
             with open(f"{results_path}/{parser_id}_result.txt", "w", encoding="utf-8") as f:
